@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+ <title>Covid-19 Temperature Collection App</title>
+ <head>
+   <link href="../static/main.css" rel="stylesheet">   
+</head>
+    <body>
+    <div class="container">
+      <h1>Collecting Covid-19 temperature</h1>  
+      <h3>Please fill the entries to get Covid-19 statistics</h3>
+        <div class="message">
+        {{text | safe}}
+        </div>
+        <form action="{{url_for('success')}}" method="POST">
+         <input title="Your email will be safe with us" placeholder="Enter your email address" type="email" name="email_name" required> <br>
+         <input title="Your data will be safe with us" placeholder="Enter your temperature in 'C " type="number" min="25", max="38" step="0.1" name="temperature_name" required> <br>
+         <button type="submit"> Submit </button>    
+               
+        </form>
+    </div> 
+    </body>
+</html>  
